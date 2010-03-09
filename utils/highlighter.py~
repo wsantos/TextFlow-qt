@@ -1,0 +1,5 @@
+class Highlighter(QSyntaxHighlighter):
+ 
+    def __init__(self, *args):
+        QSyntaxHighlighter.__init__(self, *args)
+
