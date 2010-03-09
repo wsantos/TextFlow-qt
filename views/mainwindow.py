@@ -26,6 +26,7 @@ class MainWindowView(QtGui.QMainWindow, Ui_MainWindow):
         
         if filepath:
             success, document = self.editor.controller.open(filepath)
+            self.editor.text_area.highlighter.setFileSyntax(filepath)
             
             if success:
                 self.editor.set_text(document.text)
